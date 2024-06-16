@@ -8,15 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Range extends Actor
 {
-    SimpleTimer attackTimer = new SimpleTimer();
-    
     public Range()
     {
         GreenfootImage attackRange = new GreenfootImage("images/attack-range.png");
         setImage(attackRange);
         attackRange.scale(75, 50);
         
-        attackTimer.mark();
     }
     
     /**
@@ -31,32 +28,20 @@ public class Range extends Actor
     
     public void attack()
     {
-        if(Greenfoot.isKeyDown("z"))
+        if(Greenfoot.isKeyDown(MyWorld.letter.toLowerCase()))
         {
-            if(isTouching(ConsonantEnemy.class))
+            if(isTouching(EnemyLabel.class))
             {
-                removeTouching(ConsonantEnemy.class);
                 MyWorld world = (MyWorld) getWorld();
+                for(int i = 0; i < Enemy.pointAmount; i++)
+                {
+                    world.increaseScore();
+                }
+                world.removeEnemy();
+                world.removeEnemyLabel();
+                
                 world.createEnemy();
-                world.increaseScore();
             }
-            return;
         }
-        if(Greenfoot.isKeyDown("x"))
-        {
-            if(isTouching(VowelEnemy.class))
-            {
-                removeTouching(VowelEnemy.class);
-                MyWorld world = (MyWorld) getWorld();
-                world.createEnemy();
-                world.increaseScore();
-            }
-            return;
-        }
-        if(attackTimer.millisElapsed() < 1000)
-        {
-            return;
-        }
-        attackTimer.mark();
     }
 }
