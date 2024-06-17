@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Range extends Actor
 {
+    GreenfootSound addPointsSound = new GreenfootSound("gain-points.mp3");
     public Range()
     {
         GreenfootImage attackRange = new GreenfootImage("images/attack-range.png");
@@ -37,6 +38,7 @@ public class Range extends Actor
                 {
                     world.increaseScore();
                 }
+                addPointsSound.play();
                 world.removeEnemy();
                 world.removeEnemyLabel();
                 

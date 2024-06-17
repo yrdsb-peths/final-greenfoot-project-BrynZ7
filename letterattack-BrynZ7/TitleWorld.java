@@ -13,6 +13,7 @@ public class TitleWorld extends World
     Label instructionLabelOne = new Label("Press the right letter", 30);
     Label instructionLabelTwo = new Label("to stop them!", 30);
     Label instructionLabelThree = new Label("Press <space> to start!", 30);
+    GreenfootSound startSound = new GreenfootSound("start-sound.wav");
     /**
      * Constructor for objects of class TitleWorld.
      * 
@@ -37,6 +38,7 @@ public class TitleWorld extends World
         // Starts the game when the user presses the space bar.
         if(Greenfoot.isKeyDown("space"))
         {
+            startSound.play();
             MyWorld gameWorld = new MyWorld();
             Greenfoot.setWorld(gameWorld);
         }
