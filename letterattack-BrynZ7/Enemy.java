@@ -9,6 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Enemy extends Actor
 {
     static int pointAmount = 1;
+    /**
+     * Constructor
+     */
     public Enemy()
     {
         GreenfootImage onePoint = new GreenfootImage("images/one.png");

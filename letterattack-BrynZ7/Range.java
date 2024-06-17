@@ -9,6 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Range extends Actor
 {
     GreenfootSound addPointsSound = new GreenfootSound("gain-points.mp3");
+    /**
+     * Constructor
+     */
     public Range()
     {
         GreenfootImage attackRange = new GreenfootImage("images/attack-range.png");
@@ -27,6 +30,9 @@ public class Range extends Actor
         attack();
     }
     
+    /**
+     * The attack method: removes the letter and adds points if the user is pressing the correct key.
+     */
     public void attack()
     {
         if(Greenfoot.isKeyDown(MyWorld.letter.toLowerCase()))

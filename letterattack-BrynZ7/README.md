@@ -5,7 +5,6 @@ Consider using **Markdown** syntax to format the text in this file. [Markdown ba
 
 
 PROJECT TITLE: Letter Attack
-PURPOSE OF PROJECT:
 VERSION or DATE: June 2024
 HOW TO START THIS PROJECT: Open the Greenfoot project and press space to start the game
 AUTHORS: Bryan Zhu
