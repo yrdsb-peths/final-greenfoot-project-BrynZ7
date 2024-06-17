@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * The Title Screen.
  * 
- * @author Zhu 
+ * @author Bryan Zhu 
  * @version June 2024
  */
 public class TitleWorld extends World

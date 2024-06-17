@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * The enemy.
  * 
- * @author Zhu 
+ * @author Bryan Zhu 
  * @version June 2024
  */
 public class Enemy extends Actor
@@ -48,7 +48,7 @@ public class Enemy extends Actor
         move(-5);
         
         MyWorld world = (MyWorld) getWorld();
-        if(isTouching(Hero.class))
+        if(isTouching(HeroHitbox.class))
         {
             world.gameOver();
             world.removeObject(this);

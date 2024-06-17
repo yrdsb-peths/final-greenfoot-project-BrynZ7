@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * The range that the Hero can attack in.
  * 
- * @author Zhu 
+ * @author Bryan Zhu 
  * @version June 2024
  */
 public class Range extends Actor

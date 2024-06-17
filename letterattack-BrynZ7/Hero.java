@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * The Hero, slayer of letters.
  * 
- * @author Zhu 
+ * @author Bryan Zhu 
  * @version June 2024
  */
 public class Hero extends Actor
@@ -21,7 +21,6 @@ public class Hero extends Actor
             slash[i] = new GreenfootImage("images/hero-slash/slash" + i + ".png");
             slash[i].scale(150, 150);
         }
-        
         animationTimer.mark();
         idle.scale(150, 150);
         setImage(idle);

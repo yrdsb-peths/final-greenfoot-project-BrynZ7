@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * The World our Hero protects.
  * 
- * @author Zhu 
+ * @author Bryan Zhu 
  * @version June 2024
  */
 public class MyWorld extends World
@@ -24,6 +24,9 @@ public class MyWorld extends World
         super(600, 400, 1);
         Hero hero = new Hero();
         addObject(hero, 80, 300);
+        
+        HeroHitbox hitbox = new HeroHitbox();
+        addObject(hitbox, 80, 300);
         
         Range range = new Range();
         addObject(range, 155, 300);
